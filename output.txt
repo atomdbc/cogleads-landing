@@ -1,0 +1,39 @@
+.
+├── README.md
+├── jsconfig.json
+├── next.config.mjs
+├── output.txt
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   └── sonetz_black.png
+├── src
+│   ├── app
+│   │   ├── favicon.ico
+│   │   ├── fonts
+│   │   │   ├── GeistMonoVF.woff
+│   │   │   └── GeistVF.woff
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   └── page.js
+│   ├── components
+│   │   ├── ParticleBackground.js
+│   │   ├── common
+│   │   ├── layout
+│   │   │   ├── Footer.js
+│   │   │   └── Navbar.js
+│   │   └── sections
+│   │       ├── CallToAction.js
+│   │       ├── Features.js
+│   │       ├── Hero.js
+│   │       ├── Pricing.js
+│   │       ├── ProblemStatement.js
+│   │       ├── Results.js
+│   │       ├── Solutions.js
+│   │       └── Testimonials.js
+│   └── pages
+│       └── index.js
+└── tailwind.config.js
+
+10 directories, 27 files
