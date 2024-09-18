@@ -40,9 +40,15 @@ export default function CallToAction() {
               <Button primary className="px-8 py-3 text-lg">
                 Start Free Trial
               </Button>
-              <Button secondary className="px-8 py-3 text-lg">
-                Book a Demo
-              </Button>
+              <a 
+                href="https://calendly.com/sonetz-inc/30min?month=2024-09" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button secondary className="px-8 py-3 text-lg">
+                  Book a Demo
+                </Button>
+              </a>
             </div>
             <p className="mt-6 text-sm text-gray-400">
               No credit card required. 14-day trial with full access. Cancel anytime.

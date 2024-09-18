@@ -6,7 +6,7 @@ import { Check } from 'lucide-react';
 const PricingTier = ({ title, monthlyPrice, yearlyPrice, features, isPopular, cta, billingPeriod, darkMode }) => (
   <div className={`p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl ${
     darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'
-  } ${isPopular ? `border-2 ${darkMode ? 'border-white' : 'border-black'} transform hover:-translate-y-1` : ''}`}>
+  }`}>
     {isPopular && (
       <span className={`px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block ${
         darkMode ? 'bg-white text-black' : 'bg-black text-white'
@@ -124,11 +124,13 @@ const Pricing = ({ darkMode }) => {
           }`}>
             Join the Waitlist
           </button>
-          <button className={`px-8 py-3 rounded-lg border transition duration-300 ${
-            darkMode ? 'bg-gray-800 text-white border-white hover:bg-gray-700' : 'bg-white text-black border-black hover:bg-gray-50'
-          }`}>
-            Book a Demo
-          </button>
+          <a href="https://calendly.com/sonetz-inc/30min?month=2024-09" target="_blank" rel="noopener noreferrer">
+            <button className={`px-8 py-3 rounded-lg border transition duration-300 ${
+              darkMode ? 'bg-gray-800 text-white border-white hover:bg-gray-700' : 'bg-white text-black border-black hover:bg-gray-50'
+            }`}>
+              Book a Demo
+            </button>
+          </a>
         </div>
       </div>
     </section>

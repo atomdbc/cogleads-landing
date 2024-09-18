@@ -30,7 +30,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
             height={24}
             className="mr-2"
           />
-          <span className="ml-2 text-lg font-semibold">Sonetz</span>
+          <span className="ml-2 text-lg font-semibold">Cogleads</span>
         </div>
         <div className="hidden md:flex space-x-8">
           {[
@@ -56,9 +56,14 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           >
             {darkMode ? <FaSun size={14} /> : <FaMoon size={14} />}
           </button>
-          <button className={`px-3 py-1.5 text-sm rounded transition duration-300 ${darkMode ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'}`}>
+          <a 
+            href="https://calendly.com/sonetz-inc/30min?month=2024-09" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`px-3 py-1.5 text-sm rounded transition duration-300 ${darkMode ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'}`}
+          >
             Book a Demo
-          </button>
+          </a>
         </div>
       </div>
     </nav>

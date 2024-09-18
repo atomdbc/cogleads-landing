@@ -69,13 +69,19 @@ const Features = ({ darkMode }) => {
           }`}>
             Start Your Journey
           </button>
-          <button className={`px-8 py-3 rounded-full font-semibold border-2 transition duration-300 ${
-            darkMode
-              ? 'bg-black text-white border-white hover:bg-gray-900'
-              : 'bg-white text-black border-black hover:bg-gray-100'
-          }`}>
-            Explore Further
-          </button>
+          <a 
+            href="https://calendly.com/sonetz-inc/30min?month=2024-09" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <button className={`px-8 py-3 rounded-full font-semibold border-2 transition duration-300 ${
+              darkMode
+                ? 'bg-black text-white border-white hover:bg-gray-900'  // Ensure clear contrast in dark mode
+                : 'bg-white text-black border-black hover:bg-gray-100'
+            }`}>
+              Explore Further
+            </button>
+          </a>
         </div>
       </div>
     </section>

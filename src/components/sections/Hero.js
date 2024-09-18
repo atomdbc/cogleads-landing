@@ -26,21 +26,27 @@ export default function Hero({ darkMode }) {
               primary 
               className={`px-6 py-3 ${
                 darkMode 
-                  ? 'bg-gray-400 text-black hover:bg-gray-400'  // Ensure contrast in dark mode
-                  : 'bg-black text-white hover:bg-gray-800'
+                  ? 'bg-gray-400 text-black hover:bg-gray-500'  // Ensure good contrast in dark mode
+                  : 'bg-black text-white hover:bg-gray-900'  // Black in light mode for visibility
               } transition-colors duration-300`}
             >
               Start Growing Today
             </Button>
-            <Button 
-              className={`px-6 py-3 ${
-                darkMode 
-                  ? 'bg-gray-600 text-white hover:bg-gray-500'  // More visible gray background
-                  : 'bg-gray-200 text-black hover:bg-gray-300'
-              } transition-colors duration-300`}
+            <a 
+              href="https://calendly.com/sonetz-inc/30min?month=2024-09" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-             Book a Demo
-            </Button>
+              <Button 
+                className={`px-6 py-3 ${
+                  darkMode 
+                    ? 'bg-gray-600 text-black hover:bg-gray-500'  // Visible gray in dark mode
+                    : 'bg-gray-500 text-white hover:bg-gray-600'  // Blue in light mode for visibility
+                } transition-colors duration-300`}
+              >
+                Book a Demo
+              </Button>
+            </a>
           </div>
         </div>
         
