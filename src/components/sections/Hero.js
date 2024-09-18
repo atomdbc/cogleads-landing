@@ -12,7 +12,7 @@ export default function Hero({ darkMode }) {
         <div className="text-center mt-20 mb-16">
           <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm mb-6 ${darkMode ? 'bg-gray-800 text-gray-200' : 'bg-gray-100 text-gray-800'}`}>
             <Rocket className="mr-2" size={20} />
-            <span>Unlock Effortless Growth with AI-Powered CRM</span>
+            <span>Grow your business with AI</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
             Spend 10x time on closing deals<br />
