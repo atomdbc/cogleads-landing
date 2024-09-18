@@ -1,68 +1,80 @@
 import React from 'react';
-import { Clock, User, BarChart2, Zap, Phone, PieChart } from 'lucide-react';
+import { Sparkles, Target, Zap, Shield, Compass, Lightbulb } from 'lucide-react';
 
-const FeatureCard = ({ icon: Icon, title, description }) => (
-  <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
-    <div className="p-3 bg-gray-100 rounded-full mb-4">
-      <Icon className="w-8 h-8 text-black" />
+const FeatureCard = ({ icon: Icon, title, description, darkMode }) => (
+  <div className={`flex flex-col items-center p-6 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 ${
+    darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'
+  }`}>
+    <div className={`p-3 rounded-full mb-4 ${darkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+      <Icon className={`w-8 h-8 ${darkMode ? 'text-white' : 'text-black'}`} />
     </div>
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600 text-center">{description}</p>
+    <p className={`text-center ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{description}</p>
   </div>
 );
 
-const Features = () => {
+const Features = ({ darkMode }) => {
   const features = [
     {
-      icon: Clock,
-      title: "Always in Sync",
-      description: "Real-time updates across all your devices, keeping your team aligned."
+      icon: Sparkles,
+      title: "Effortless Alignment",
+      description: "Experience seamless coordination across your entire team, boosting productivity and ensuring everyone is on the same page."
     },
     {
-      icon: User,
-      title: "AI Calling Agent",
-      description: "Automatically reach out to leads, leaving more time for closing deals."
-    },
-    {
-      icon: BarChart2,
-      title: "Task Automation",
-      description: "Automate repetitive tasks so you can focus on what really matters."
+      icon: Target,
+      title: "Proactive Outreach",
+      description: "Stay ahead of the curve with intelligent lead engagement, allowing you to focus on high-value interactions and relationship building."
     },
     {
       icon: Zap,
-      title: "Production-ready",
-      description: "Seamlessly integrate Cogleads into your existing workflow."
+      title: "Streamlined Operations",
+      description: "Eliminate time-consuming manual processes and redirect your energy towards strategic initiatives that drive growth."
     },
     {
-      icon: Phone,
-      title: "Supreme Support",
-      description: "24/7 expert assistance to ensure your success with Cogleads."
+      icon: Shield,
+      title: "Enterprise-Ready Solution",
+      description: "Leverage a robust platform designed to integrate seamlessly with your existing systems, ensuring a smooth transition and immediate value."
     },
     {
-      icon: PieChart,
-      title: "Business Insights",
-      description: "Data-driven insights to optimize your sales and marketing strategies."
+      icon: Compass,
+      title: "Dedicated Guidance",
+      description: "Navigate your journey with confidence, backed by round-the-clock expert support to maximize your success and overcome any challenges."
+    },
+    {
+      icon: Lightbulb,
+      title: "Strategic Foresight",
+      description: "Gain a competitive edge with deep insights that empower you to make informed decisions and stay ahead in your industry."
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className={`py-20 ${darkMode ? 'bg-black' : 'bg-white'}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-4">No more complicated workflows.</h2>
-        <p className="text-xl text-gray-600 text-center mb-12">
-          Work smarter, not harder with AI-powered solutions.
+        <h2 className={`text-4xl font-bold text-center mb-4 ${darkMode ? 'text-white' : 'text-black'}`}>
+          Streamline Your Path to Success
+        </h2>
+        <p className={`text-xl text-center mb-12 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+          Unlock your team's full potential with our innovative solutions
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <FeatureCard key={index} {...feature} />
+            <FeatureCard key={index} {...feature} darkMode={darkMode} />
           ))}
         </div>
         <div className="mt-16 text-center">
-          <button className="bg-black text-white px-8 py-3 rounded-full font-semibold mr-4 hover:bg-gray-800 transition duration-300">
-            Join the Waitlist
+          <button className={`px-8 py-3 rounded-full font-semibold mr-4 transition duration-300 ${
+            darkMode 
+              ? 'bg-white text-black hover:bg-gray-200' 
+              : 'bg-black text-white hover:bg-gray-800'
+          }`}>
+            Start Your Journey
           </button>
-          <button className="bg-white text-black px-8 py-3 rounded-full font-semibold border-2 border-black hover:bg-gray-100 transition duration-300">
-            Book a Demo
+          <button className={`px-8 py-3 rounded-full font-semibold border-2 transition duration-300 ${
+            darkMode
+              ? 'bg-black text-white border-white hover:bg-gray-900'
+              : 'bg-white text-black border-black hover:bg-gray-100'
+          }`}>
+            Explore Further
           </button>
         </div>
       </div>
