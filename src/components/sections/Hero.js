@@ -37,15 +37,15 @@ export default function Hero({ darkMode }) {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button 
-                className={`px-6 py-3 ${
-                  darkMode 
-                    ? 'bg-gray-600 text-black hover:bg-gray-500'  // Visible gray in dark mode
-                    : 'bg-gray-500 text-white hover:bg-gray-600'  // Blue in light mode for visibility
-                } transition-colors duration-300`}
-              >
-                Book a Demo
-              </Button>
+             <Button 
+            className={`px-6 py-3 ${
+              darkMode 
+                ? 'bg-gray-600 text-white hover:bg-gray-500'  // Dark mode
+                : 'bg-gray-300 text-gray-800 hover:bg-gray-400'  // Light mode
+            } transition-colors duration-300`}
+          >
+            Book a Demo
+          </Button>
             </a>
           </div>
         </div>
