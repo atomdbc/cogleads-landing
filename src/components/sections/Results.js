@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Users, TrendingUp, BarChart2, PieChart } from 'lucide-react';
+import { ArrowUpRight, Users, TrendingUp, BarChart2, PieChart, Zap } from 'lucide-react';
 import Image from 'next/image';
 
 const MetricCard = ({ value, label, icon: Icon, darkMode }) => (
@@ -47,9 +47,9 @@ const AlternatingSection = ({ title, description, image, imageAlt, features, isI
 
 const Results = ({ darkMode }) => {
   const metrics = [
-    { value: "500%", label: "Productivity Boost", icon: TrendingUp },
-    { value: "1M+", label: "Tasks Automated", icon: BarChart2 },
-    { value: "99.9%", label: "AI Accuracy", icon: Users },
+    { value: "10x", label: "Faster Lead Generation", icon: TrendingUp },
+    { value: "100%", label: "More Follow-ups Automatically", icon: Zap },
+    { value: "8x", label: "Improvement in Sales Conversions", icon: Users },
   ];
 
   const sections = [
@@ -92,9 +92,9 @@ const Results = ({ darkMode }) => {
     <section className={`py-20 ${darkMode ? 'bg-black' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className={`text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-black'}`}>Transforming Businesses with AI</h2>
+          <h2 className={`text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-black'}`}>How Cogleads Saves Time</h2>
           <p className={`text-xl max-w-2xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-            Experience unprecedented growth and efficiency with our cutting-edge AI solutions.
+          Make your business run smoother and grow faster
           </p>
         </div>
 

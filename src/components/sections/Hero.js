@@ -15,22 +15,22 @@ export default function Hero({ darkMode }) {
             <span>Grow your business with AI</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            Spend 10x time on closing deals<br />
-            using Cogleads
+            Spend More Time Closing Deals,<br />
+            Not Chasing Leads
           </h1>
           <p className={`text-lg mb-8 max-w-2xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-            Experience 10x efficiency, 50% cost reduction, and 100% customer satisfaction. Our AI-powered all-in-one solution works tirelessly so you don't have to.
+            Let us handle the busywork while you focus on growing your business.
           </p>
           <div className="space-x-4">
             <Button 
               primary 
               className={`px-6 py-3 ${
                 darkMode 
-                  ? 'bg-gray-400 text-black hover:bg-gray-500'  // Ensure good contrast in dark mode
-                  : 'bg-black text-white hover:bg-gray-900'  // Black in light mode for visibility
+                  ? 'bg-gray-400 text-black hover:bg-gray-500'
+                  : 'bg-black text-white hover:bg-gray-900'
               } transition-colors duration-300`}
             >
-              Start Growing Today
+              Join the Waitlist
             </Button>
             <a 
               href="https://calendly.com/sonetz-inc/30min?month=2024-09" 
@@ -38,14 +38,14 @@ export default function Hero({ darkMode }) {
               rel="noopener noreferrer"
             >
              <Button 
-            className={`px-6 py-3 ${
-              darkMode 
-                ? 'bg-gray-600 text-white hover:bg-gray-500'  // Dark mode
-                : 'bg-gray-300 text-gray-800 hover:bg-gray-400'  // Light mode
-            } transition-colors duration-300`}
-          >
-            Book a Demo
-          </Button>
+              className={`px-6 py-3 ${
+                darkMode 
+                  ? 'bg-gray-600 text-white hover:bg-gray-500'
+                  : 'bg-gray-300 text-gray-800 hover:bg-gray-400'
+              } transition-colors duration-300`}
+            >
+              Book a Demo
+            </Button>
             </a>
           </div>
         </div>
