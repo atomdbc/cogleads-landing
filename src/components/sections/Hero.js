@@ -29,7 +29,7 @@ export default function Hero({ darkMode }) {
           <div className="space-x-4">
             <button
               onClick={openModal}
-              className={`inline-block px-8 py-3 rounded-full text-white ${darkMode ? 'bg-gray-400 hover:bg-gray-500' : 'bg-black hover:bg-gray-700'} transition-colors duration-300`}
+              className={`inline-block px-8 py-3 rounded-full text-white ${darkMode ? 'bg-gray-700 hover:bg-gray-500' : 'bg-black hover:bg-gray-700'} transition-colors duration-300`}
             >
               Join the Waitlist
             </button>
@@ -37,7 +37,7 @@ export default function Hero({ darkMode }) {
               href="https://calendly.com/sonetz-inc/30min?month=2024-09"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-block px-8 py-3 rounded-full text-white ${darkMode ? 'bg-gray-500 hover:bg-gray-600' : 'bg-gray-300 hover:bg-gray-400'} transition-colors duration-300`}
+              className={`inline-block px-8 py-3 rounded-full text-black ${darkMode ? 'bg-gray-100 hover:bg-gray-600' : 'bg-gray-300 hover:bg-gray-400'} transition-colors duration-300`}
             >
               Book a Demo
             </a>
