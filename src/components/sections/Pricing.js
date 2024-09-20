@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Check, Star } from 'lucide-react';
+import WaitlistModal from '../common/WaitlistModal';
 
 const PricingTier = ({ title, monthlyPrice, yearlyPrice, features, isPopular, cta, billingPeriod, darkMode }) => (
   <div className={`p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl ${
@@ -46,6 +47,10 @@ const PricingTier = ({ title, monthlyPrice, yearlyPrice, features, isPopular, ct
 
 const Pricing = ({ darkMode }) => {
   const [billingPeriod, setBillingPeriod] = useState('monthly');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const freeTierFeatures = [
     'Join a workspace',
@@ -124,7 +129,7 @@ const Pricing = ({ darkMode }) => {
           <div className="flex justify-center space-x-6">
             <button className={`px-8 py-3 rounded-full text-base transition duration-300 ${
               darkMode ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'
-            }`}>
+            }`} onClick={openModal}>
               Join the Waitlist
             </button>
             <a href="https://calendly.com/sonetz-inc/30min?month=2024-09" target="_blank" rel="noopener noreferrer">
@@ -137,6 +142,7 @@ const Pricing = ({ darkMode }) => {
           </div>
         </div>
       </div>
+      <WaitlistModal isOpen={isModalOpen} onClose={closeModal} darkMode={darkMode} />
     </section>
   );
 };

@@ -7,7 +7,9 @@
 ├── package.json
 ├── postcss.config.mjs
 ├── public
-│   └── sonetz_black.png
+│   ├── pexels-karolina-grabowska-4467687.jpg
+│   ├── sonetz_black.png
+│   └── sonetz_white.png
 ├── src
 │   ├── app
 │   │   ├── favicon.ico
@@ -17,23 +19,23 @@
 │   │   ├── globals.css
 │   │   ├── layout.js
 │   │   └── page.js
-│   ├── components
-│   │   ├── ParticleBackground.js
-│   │   ├── common
-│   │   ├── layout
-│   │   │   ├── Footer.js
-│   │   │   └── Navbar.js
-│   │   └── sections
-│   │       ├── CallToAction.js
-│   │       ├── Features.js
-│   │       ├── Hero.js
-│   │       ├── Pricing.js
-│   │       ├── ProblemStatement.js
-│   │       ├── Results.js
-│   │       ├── Solutions.js
-│   │       └── Testimonials.js
-│   └── pages
-│       └── index.js
+│   └── components
+│       ├── ParticleBackground.js
+│       ├── common
+│       │   ├── Button.js
+│       │   └── NavLink.js
+│       ├── layout
+│       │   ├── Footer.js
+│       │   └── Navbar.js
+│       └── sections
+│           ├── CallToAction.js
+│           ├── Features.js
+│           ├── Hero.js
+│           ├── Integrations.js
+│           ├── Pricing.js
+│           ├── ProblemStatement.js
+│           ├── Results.js
+│           └── Testimonials.js
 └── tailwind.config.js
 
-10 directories, 27 files
+9 directories, 30 files

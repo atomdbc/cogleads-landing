@@ -1,11 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Rocket } from 'lucide-react';
 import Image from 'next/image';
-import Button from '../common/Button';
+import WaitlistModal from '../common/WaitlistModal';
 
 export default function Hero({ darkMode }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className={`min-h-screen bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark transition-colors duration-300`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,20 +27,23 @@ export default function Hero({ darkMode }) {
             Let us handle the busywork while you focus on growing your business.
           </p>
           <div className="space-x-4">
-            <a href="/" className={`inline-block px-8 py-3 rounded-full text-white ${darkMode ? 'bg-gray-400 hover:bg-gray-500' : 'bg-black hover:bg-gray-700'} transition-colors duration-300`}>
+            <button
+              onClick={openModal}
+              className={`inline-block px-8 py-3 rounded-full text-white ${darkMode ? 'bg-gray-400 hover:bg-gray-500' : 'bg-black hover:bg-gray-700'} transition-colors duration-300`}
+            >
               Join the Waitlist
-            </a>
+            </button>
             <a
               href="https://calendly.com/sonetz-inc/30min?month=2024-09"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-block px-8 py-3 rounded-full text-white ${darkMode ? 'bg-gray-500 hover:bg-gray-500' : 'bg-gray-400 hover:bg-gray-300'} transition-colors duration-300`}
+              className={`inline-block px-8 py-3 rounded-full text-white ${darkMode ? 'bg-gray-500 hover:bg-gray-600' : 'bg-gray-300 hover:bg-gray-400'} transition-colors duration-300`}
             >
               Book a Demo
             </a>
           </div>
         </div>
-
+        
         <div className="mt-20">
           <div className={`rounded-lg overflow-hidden shadow-md ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
             <Image
@@ -48,6 +56,8 @@ export default function Hero({ darkMode }) {
           </div>
         </div>
       </div>
+      
+      <WaitlistModal isOpen={isModalOpen} onClose={closeModal} darkMode={darkMode} />
     </div>
   );
 }
