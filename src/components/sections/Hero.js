@@ -22,34 +22,20 @@ export default function Hero({ darkMode }) {
             Let us handle the busywork while you focus on growing your business.
           </p>
           <div className="space-x-4">
-            <Button 
-              primary 
-              className={`px-6 py-3 ${
-                darkMode 
-                  ? 'bg-gray-400 text-black hover:bg-gray-500'
-                  : 'bg-black text-white hover:bg-gray-900'
-              } transition-colors duration-300`}
-            >
+            <a href="/" className={`inline-block px-8 py-3 rounded-full text-white ${darkMode ? 'bg-gray-400 hover:bg-gray-500' : 'bg-black hover:bg-gray-700'} transition-colors duration-300`}>
               Join the Waitlist
-            </Button>
-            <a 
-              href="https://calendly.com/sonetz-inc/30min?month=2024-09" 
-              target="_blank" 
+            </a>
+            <a
+              href="https://calendly.com/sonetz-inc/30min?month=2024-09"
+              target="_blank"
               rel="noopener noreferrer"
-            >
-             <Button 
-              className={`px-6 py-3 ${
-                darkMode 
-                  ? 'bg-gray-600 text-white hover:bg-gray-500'
-                  : 'bg-gray-300 text-gray-800 hover:bg-gray-400'
-              } transition-colors duration-300`}
+              className={`inline-block px-8 py-3 rounded-full text-white ${darkMode ? 'bg-gray-500 hover:bg-gray-500' : 'bg-gray-400 hover:bg-gray-300'} transition-colors duration-300`}
             >
               Book a Demo
-            </Button>
             </a>
           </div>
         </div>
-        
+
         <div className="mt-20">
           <div className={`rounded-lg overflow-hidden shadow-md ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
             <Image

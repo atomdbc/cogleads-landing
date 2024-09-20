@@ -1,17 +1,17 @@
 import React from 'react';
 import { Target, Clock, Zap, MessageCircle, Headphones, UserPlus } from 'lucide-react';
 
-const FeatureCard = ({ icon: Icon, title, description }) => (
-  <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md">
-    <div className="p-3 bg-gray-100 rounded-full mb-4">
-      <Icon className="w-6 h-6 text-gray-600" />
+const FeatureCard = ({ icon: Icon, title, description, darkMode }) => (
+  <div className={`flex flex-col items-center p-6 rounded-lg shadow-md ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
+    <div className={`p-3 rounded-full mb-4 ${darkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+      <Icon className={`w-6 h-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`} />
     </div>
-    <h3 className="text-xl font-semibold mb-2 text-center">{title}</h3>
-    <p className="text-center text-gray-600 text-sm">{description}</p>
+    <h3 className={`text-xl font-semibold mb-2 text-center ${darkMode ? 'text-white' : 'text-gray-800'}`}>{title}</h3>
+    <p className={`text-center text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{description}</p>
   </div>
 );
 
-const Features = () => {
+const Features = ({ darkMode }) => {
   const features = [
     {
       icon: Target,
@@ -46,17 +46,17 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-2">
+        <h2 className={`text-4xl font-bold text-center mb-2 ${darkMode ? 'text-white' : 'text-gray-800'}`}>
           What Cogleads Does for You
         </h2>
-        <p className="text-lg text-center mb-12 text-gray-600">
+        <p className={`text-lg text-center mb-12 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
           Cogleads makes business easy by handling the details for you.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <FeatureCard key={index} {...feature} />
+            <FeatureCard key={index} {...feature} darkMode={darkMode} />
           ))}
         </div>
       </div>

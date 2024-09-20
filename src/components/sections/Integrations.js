@@ -57,8 +57,8 @@ const Integrations = ({ darkMode }) => {
     { Icon: FaShopify, name: 'Shopify' },
    ];
 
-  return (
-    <section className={`py-20 ${darkMode ? 'bg-black text-white' : 'bg-white text-black'} transition-colors duration-300`}>
+   return (
+    <section className={`py-20 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'} transition-colors duration-300`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-4">Seamless Business Integrations</h2>
         <p className={`text-xl text-center mb-12 max-w-3xl mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>

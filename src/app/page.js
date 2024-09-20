@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/layout/Navbar';
 import Hero from '../components/sections/Hero';
+import ProblemStatement from '../components/sections/ProblemStatement';
 import Results from '../components/sections/Results';
 import Features from '../components/sections/Features';
 import Pricing from '../components/sections/Pricing';
@@ -31,13 +32,16 @@ export default function Home() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark bg-black text-white' : 'bg-white text-black'}`}>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <div id="hero"><Hero darkMode={darkMode} /></div>
-      <div id="features"><Features darkMode={darkMode} /></div>
-      <div id="results"><Results darkMode={darkMode} /></div>
-      <div id="integrations"><Integrations darkMode={darkMode} /></div>
-      <div id="pricing"><Pricing darkMode={darkMode} /></div>
-      <div id="testimonials"><Testimonials darkMode={darkMode} /></div>
-      <div id="cta"><CallToAction darkMode={darkMode} /></div>
+      <main className="pt-32">
+        <div id="hero" className="pt-8"><Hero darkMode={darkMode} /></div>
+        <div id="problem-statement"><ProblemStatement darkMode={darkMode} /></div>
+        <div id="features"><Features darkMode={darkMode} /></div>
+        <div id="results"><Results darkMode={darkMode} /></div>
+        <div id="integrations"><Integrations darkMode={darkMode} /></div>
+        <div id="pricing"><Pricing darkMode={darkMode} /></div>
+        <div id="testimonials"><Testimonials darkMode={darkMode} /></div>
+        <div id="cta"><CallToAction darkMode={darkMode} /></div>
+      </main>
       <Footer darkMode={darkMode} />
     </div>
   );
